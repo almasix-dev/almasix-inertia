@@ -6,6 +6,9 @@ from typing import Any
 from unittest.mock import MagicMock
 
 import pytest
+from almasix.config import ConfigRepository, set_repository
+from almasix.http.request import reset_request, set_request
+
 from inertia import Inertia, InertiaResponse, lazy, merge, optional
 from inertia.console.start_ssr import InertiaStartSsrCommand
 from inertia.middleware import HandleInertiaRequests
@@ -13,9 +16,6 @@ from inertia.props import MergeProp
 from inertia.provider import InertiaServiceProvider
 from inertia.response import _filter_partial, _is_inertia, _resolve_props
 from inertia.ssr import render_ssr
-
-from almasix.config import ConfigRepository, set_repository
-from almasix.http.request import reset_request, set_request
 
 
 class _HdrReq:
@@ -148,7 +148,7 @@ def test_page_url_query_and_ssr_document(monkeypatch: pytest.MonkeyPatch) -> Non
             "inertia.response.render", lambda view, ctx: f"VIEW:{ctx['ssr_body']}:{ctx['ssr_head']}"
         )
         doc = resp._document({"component": "Dash", "props": {}})
-        assert "VIEW:<b>:<t>" == doc
+        assert doc == "VIEW:<b>:<t>"
     finally:
         set_repository(None)
 

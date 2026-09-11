@@ -5,9 +5,8 @@ from __future__ import annotations
 from typing import TYPE_CHECKING
 from urllib.parse import urlsplit
 
-from starlette.responses import Response as StarletteResponse
-
 from almasix.http.middleware import Middleware, NextCall
+from starlette.responses import Response as StarletteResponse
 
 if TYPE_CHECKING:
     from almasix.http.request import Request

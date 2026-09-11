@@ -7,11 +7,10 @@ import json
 from collections.abc import Callable, Mapping
 from typing import Any
 
-from starlette.responses import HTMLResponse, JSONResponse, Response
-
 from almasix.config import config
 from almasix.http.request import Request, get_request
 from almasix.prism.helpers import render
+from starlette.responses import HTMLResponse, JSONResponse, Response
 
 
 def _cfg(key: str, default: Any = None) -> Any:

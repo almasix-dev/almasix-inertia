@@ -34,10 +34,7 @@ def render_ssr(page: dict[str, Any]) -> dict[str, str] | None:
         if not isinstance(data, dict):
             return None
         head = data.get("head") or []
-        if isinstance(head, list):
-            head_html = "".join(str(h) for h in head)
-        else:
-            head_html = str(head)
+        head_html = "".join(str(h) for h in head) if isinstance(head, list) else str(head)
         return {"head": head_html, "body": str(data.get("body") or "")}
     except Exception:
         return None
