@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "almasix-inertia"
+version = "0.1.0"
+description = "Server-side Inertia.js adapter for Almasix (official clients + SSR)"
+requires-python = ">=3.11"
+dependencies = [
+    "almasix>=0.6.0",
+    "httpx>=0.27.0",
+]
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Almasix Contributors" }]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24.0",
+    "httpx>=0.27.0",
+    "ruff==0.16.6",
+]
+
+[project.entry-points."almasix.providers"]
+inertia = "inertia.provider:InertiaServiceProvider"
+
+[project.urls]
+Homepage = "https://github.com/almasix-dev/inertia"
+Repository = "https://github.com/almasix-dev/inertia"
+Documentation = "https://almasix-dev.github.io/almasix/inertia/"
+Issues = "https://github.com/almasix-dev/inertia/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/inertia"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src/inertia",
+    "/tests",
+    "/README.md",
+    "/LICENSE",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["src"]
+python_files = ["test_*.py", "*_test.py"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.ruff.format]
+quote-style = "double"
