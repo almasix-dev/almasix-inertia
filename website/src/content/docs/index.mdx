@@ -1,0 +1,24 @@
+---
+title: Inertia for Almasix
+description: Server-side Inertia.js adapter for official Vue, React, and Svelte clients — protocol, SSR, and prop helpers.
+---
+
+**almasix-inertia** is a **server-only** adapter. Use the official
+`@inertiajs/vue3`, `@inertiajs/react`, or `@inertiajs/svelte` clients — there is
+**no forked JS client**. SSR uses Inertia’s Node `/render` protocol.
+
+```bash title="terminal"
+pip install 'almasix[inertia]'
+# or
+pip install almasix-inertia
+```
+
+```python title="examples/inertia.py"
+from inertia import Inertia, lazy, defer, once, merge
+```
+
+SPA starter kits register `InertiaServiceProvider` explicitly; the package also
+advertises it via the `almasix.providers` entry-point group.
+
+Continue with [Installation](/installation/) or jump to [Rendering](/rendering/).
+Client UX stays on [inertiajs.com](https://inertiajs.com).
