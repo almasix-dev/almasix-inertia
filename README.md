@@ -29,7 +29,7 @@ A Node SSR stub lives at `src/inertia/ssr/server.js`.
 SPA kits register `InertiaServiceProvider` explicitly; the package also
 advertises it via the `almasix.providers` entry-point group.
 
-Framework docs: [Inertia](https://almasix-dev.github.io/almasix/inertia/).
+Framework docs: [Inertia](https://inertia.almasix.com/).
 
 ## Develop
 
