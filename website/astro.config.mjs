@@ -71,10 +71,10 @@ export default defineConfig({
 				},
 			],
 			sidebar: [
+				{ label: 'Home', slug: 'index' },
 				{
 					label: 'Inertia',
 					items: [
-						{ label: 'Introduction', slug: 'index' },
 						{ label: 'Installation', slug: 'installation' },
 						{ label: 'Rendering', slug: 'rendering' },
 						{ label: 'Shared props', slug: 'shared-props' },
