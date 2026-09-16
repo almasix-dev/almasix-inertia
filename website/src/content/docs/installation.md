@@ -9,9 +9,10 @@ pip install 'almasix[inertia]'
 pip install almasix-inertia
 ```
 
-SPA starter kits already register `inertia.provider.InertiaServiceProvider`.
-Otherwise list the provider in `config/app.py`, or rely on the
-`almasix.providers` entry-point group when the package is installed.
+SPA starter kits ([`almasix-starter-kit-spa`](https://github.com/almasix-dev/almasix-starter-kits))
+already register `inertia.provider.InertiaServiceProvider` — install with
+`pip install almasix-starter-kit-spa` then `almasix new myapp --kit react`
+(or `vue` / `svelte`). See the [Almasix starter kits](https://docs.almasix.com/starter-kits/) docs.
 
 Published on [PyPI](https://pypi.org/project/almasix-inertia/) from
 [`almasix-dev/inertia`](https://github.com/almasix-dev/almasix-inertia).
