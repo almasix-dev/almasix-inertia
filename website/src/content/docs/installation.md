@@ -14,4 +14,4 @@ Otherwise list the provider in `config/app.py`, or rely on the
 `almasix.providers` entry-point group when the package is installed.
 
 Published on [PyPI](https://pypi.org/project/almasix-inertia/) from
-[`almasix-dev/inertia`](https://github.com/almasix-dev/inertia).
+[`almasix-dev/inertia`](https://github.com/almasix-dev/almasix-inertia).

@@ -21,10 +21,10 @@ export default defineConfig({
 			},
 			favicon: '/favicon.svg',
 			social: [
-				{ icon: 'github', label: 'GitHub', href: 'https://github.com/almasix-dev/inertia' },
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/almasix-dev/almasix-inertia' },
 			],
 			editLink: {
-				baseUrl: 'https://github.com/almasix-dev/inertia/edit/main/website/',
+				baseUrl: 'https://github.com/almasix-dev/almasix-inertia/edit/main/website/',
 			},
 			customCss: ['./src/styles/custom.css'],
 			components: {

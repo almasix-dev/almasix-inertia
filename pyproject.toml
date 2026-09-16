@@ -27,10 +27,10 @@ dev = [
 inertia = "inertia.provider:InertiaServiceProvider"
 
 [project.urls]
-Homepage = "https://github.com/almasix-dev/inertia"
-Repository = "https://github.com/almasix-dev/inertia"
+Homepage = "https://github.com/almasix-dev/almasix-inertia"
+Repository = "https://github.com/almasix-dev/almasix-inertia"
 Documentation = "https://almasix-dev.github.io/almasix/inertia/"
-Issues = "https://github.com/almasix-dev/inertia/issues"
+Issues = "https://github.com/almasix-dev/almasix-inertia/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/inertia"]
