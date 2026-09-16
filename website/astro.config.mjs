@@ -69,6 +69,36 @@ export default defineConfig({
 					tag: 'script',
 					content: readFileSync('./src/scripts/sidebar-accordion.js', 'utf8'),
 				},
+				{
+					tag: 'meta',
+					attrs: { property: 'og:image', content: 'https://inertia.almasix.com/og.png' },
+				},
+				{
+					tag: 'meta',
+					attrs: { property: 'og:image:width', content: '1200' },
+				},
+				{
+					tag: 'meta',
+					attrs: { property: 'og:image:height', content: '630' },
+				},
+				{
+					tag: 'meta',
+					attrs: { property: 'og:image:alt', content: 'Almasix Inertia — Almasix' },
+				},
+				{
+					tag: 'meta',
+					attrs: { name: 'twitter:image', content: 'https://inertia.almasix.com/og.png' },
+				},
+				{
+					tag: 'meta',
+					attrs: { name: 'theme-color', content: '#F1511B' },
+				},
+				{
+					tag: 'script',
+					attrs: { type: 'application/ld+json' },
+					content: "{\"@context\": \"https://schema.org\", \"@graph\": [{\"@type\": \"WebSite\", \"@id\": \"https://inertia.almasix.com/#website\", \"url\": \"https://inertia.almasix.com/\", \"name\": \"Almasix Inertia\", \"description\": \"Server-side Inertia.js adapter for Almasix \\u2014 Vue, React, Svelte clients, SSR, and prop helpers.\", \"publisher\": {\"@id\": \"https://almasix.com/#organization\"}, \"inLanguage\": \"en\"}, {\"@type\": \"SoftwareApplication\", \"@id\": \"https://inertia.almasix.com/#software\", \"name\": \"Almasix Inertia\", \"applicationCategory\": \"DeveloperApplication\", \"url\": \"https://inertia.almasix.com/\", \"isPartOf\": {\"@id\": \"https://almasix.com/#software\"}, \"publisher\": {\"@id\": \"https://almasix.com/#organization\"}}]}",
+				},
+
 			],
 			sidebar: [
 				{ label: 'Home', slug: 'index' },
