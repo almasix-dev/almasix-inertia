@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Inertia documentation
+    url: https://inertia.almasix.com/
+    about: Guides for the Almasix Inertia adapter and SSR.
+  - name: Discussions
+    url: https://github.com/almasix-dev/almasix-inertia/discussions
+    about: Questions, show-and-tell, and open-ended conversation (not bug trackers).
+  - name: Almasix org
+    url: https://github.com/almasix-dev
+    about: Other first-party packages and the Almasix organization.
