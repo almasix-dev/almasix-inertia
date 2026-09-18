@@ -1,0 +1,90 @@
+name: Bug report
+description: Something isn't working as documented or expected.
+title: "bug: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. Please fill every section you can — incomplete reports are harder to reproduce.
+
+  - type: input
+    id: inertia-version
+    attributes:
+      label: almasix-inertia version
+      description: e.g. (`pip show almasix-inertia`)
+      placeholder: "0.x.x"
+    validations:
+      required: true
+
+  - type: input
+    id: client
+    attributes:
+      label: Client stack
+      description: Vue / React / Svelte + versions
+      placeholder: "Vue 3 + @inertiajs/vue3"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+          - Server adapter / responses
+          - Shared data / props
+          - SSR
+          - Client (Vue / React / Svelte)
+          - Routing / middleware
+          - Docs / examples
+          - Packaging / install
+          - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Clear description of the bug.
+      placeholder: When I …
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal steps or a small code sample.
+      placeholder: |
+        1. …
+        2. …
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, runtime, browser (if UI).
+      placeholder: |
+        - OS: Linux
+        - Python / Node: …
+    validations:
+      required: false
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / stack traces
+      render: shell
+    validations:
+      required: false
